@@ -2,13 +2,9 @@
 
 ## A simple Middleman starting point
 
-demo:
 
-[http://middleman-bootstrap.herokuapp.com/](http://middleman-bootstrap.herokuapp.com/)
+###supports:
 
-supports:
-
-* [Slim](http://slim-lang.com/)
 * [CoffeeScript](http://coffeescript.org/)
 * [Sass](http://sass-lang.com/)
 * [Compass](http://compass-style.org/)
@@ -17,8 +13,7 @@ supports:
 * [Modernizr](http://modernizr.com/)
 * [FontAwesome](http://fortawesome.github.com/Font-Awesome/)
 
-install:
-
+###install:
 
 ```
 $ git clone git://github.com/fujimogn/middleman-bootstrap.git #{APP_DIR} && cd #{APP_DIR}
@@ -26,9 +21,7 @@ $ git clone git://github.com/fujimogn/middleman-bootstrap.git #{APP_DIR} && cd #
 $ bundle install --without production
 $ bower install
 ```
-
-deploy:
-
+###deploy:
 ```
 $ heroku create middleman-bootstrap --stack cedar
 $ git add .
