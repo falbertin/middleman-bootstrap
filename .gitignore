@@ -17,7 +17,7 @@
 
 
 .DS_Store
-
+.orig
 
 /vendor/javascripts/*/*
 !/vendor/javascripts/*/*component.json

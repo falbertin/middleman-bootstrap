@@ -13,7 +13,7 @@ gem "middleman-favicon-maker", :git => "git@github.com:follmann/middleman-favico
 
 gem "slim"
 gem "compass-rgbapng"
-gem "bootstrap-sass", :git => "git@github.com:sengeezer/bootstrap-sass.git", :branch => "plus"
+gem "bootstrap-sass-plus", :git => "git@github.com:sengeezer/bootstrap-sass.git", :branch => "plusprod"
 gem "sassy-buttons"
 
 group :development do
