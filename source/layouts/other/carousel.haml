@@ -2,19 +2,23 @@
 %html{:lang => "en"}
   %head
     %meta{:charset => "utf-8"}
-    %title
-      Carousel Template &middot; Bootstrap
+    %title Carousel Template &middot; Bootstrap
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
     %meta{:content => "", :name => "description"}
     %meta{:content => "", :name => "author"}
 
     %link{:href => "../assets/css/bootstrap.css", :rel => "stylesheet"}
-    %link{:href => "../assets/css/bootstrap-responsive.css", :rel => "stylesheet"}
+    %link{:href => "../assets/css/bootstrap-responsive.css", :rel => "stylesheet"}/
     :css
+      /* GLOBAL STYLES
+      -------------------------------------------------- */
+      /* Padding below the footer and lighter body text */
       body {
         padding-bottom: 40px;
         color: #5a5a5a;
       }
+      /* CUSTOMIZE THE NAVBAR
+      -------------------------------------------------- */
       /* Special class on .container surrounding .navbar, used for positioning it into place. */
       .navbar-wrapper {
         position: absolute;
@@ -46,6 +50,8 @@
       .navbar .nav > li > a { padding: 15px 20px; }
       /* Offset the responsive button for proper vertical alignment */
       .navbar .btn-navbar { margin-top: 10px; }
+      /* CUSTOMIZE THE CAROUSEL
+      -------------------------------------------------- */
       /* Carousel base class */
       .carousel { margin-bottom: 60px; }
       .carousel .container {
@@ -83,9 +89,9 @@
         color: #fff;
         text-shadow: 0 1px 1px rgba(0,0,0,.4);
       }
-      .carousel-caption .btn {
-        margin-top: 10px;
-      }
+      .carousel-caption .btn { margin-top: 10px; }
+      /* MARKETING CONTENT
+      -------------------------------------------------- */
       /* Center align the text within the three columns below the carousel */
       .marketing .span4 { text-align: center; }
       .marketing h2 { font-weight: normal; }
@@ -93,6 +99,8 @@
         margin-left: 10px;
         margin-right: 10px;
       }
+      /* Featurettes
+      ------------------------- */
       .featurette-divider {
         margin: 80px 0; /* Space out the Bootstrap <hr> more */
       }
@@ -113,6 +121,8 @@
         line-height: 1;
         letter-spacing: -1px;
       }
+      /* RESPONSIVE CSS
+      -------------------------------------------------- */
       @media (max-width: 979px) {
         .container.navbar-wrapper {
           margin-bottom: 0;
@@ -122,13 +132,13 @@
           border-radius: 0;
           margin: -20px 0;
         }
-        .carousel .item {
-          height: 500px;
-        }
+
+        .carousel .item { height: 500px; }
         .carousel img {
           width: auto;
           height: 500px;
         }
+
         .featurette {
           height: auto;
           padding: 0;
@@ -143,11 +153,14 @@
       }
       @media (max-width: 767px) {
         .navbar-inner { margin: -20px; }
+
         .carousel {
           margin-left: -20px;
           margin-right: -20px;
         }
-        .carousel .container { }
+        .carousel .container {
+
+        }
         .carousel .item { height: 300px; }
         .carousel img { height: 300px; }
         .carousel-caption {
@@ -158,51 +171,50 @@
         .carousel-caption h1 { font-size: 30px; }
         .carousel-caption .lead,
         .carousel-caption .btn { font-size: 18px; }
+
         .marketing .span4 + .span4 { margin-top: 40px; }
+
         .featurette-heading { font-size: 30px; }
         .featurette .lead {
           font-size: 18px;
           line-height: 1.5;
         }
       }
-    / HTML5 shim, for IE6-8 support of HTML5 elements
+
     /[if lt IE 9]
       <script src="../assets/js/html5shiv.js"></script>
-    / Fav and touch icons
+
     %link{:href => "../assets/ico/apple-touch-icon-144-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "144x144"}
     %link{:href => "../assets/ico/apple-touch-icon-114-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "114x114"}
     %link{:href => "../assets/ico/apple-touch-icon-72-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "72x72"}
     %link{:href => "../assets/ico/apple-touch-icon-57-precomposed.png", :rel => "apple-touch-icon-precomposed"}
     %link{:href => "../assets/ico/favicon.png", :rel => "shortcut icon"}
   %body
-    %div{:class => "navbar-wrapper"}
+    .navbar-wrapper
       / Wrap the .navbar in .container to center it within the absolutely positioned parent.
-      %div{:class => "container"}
-        %div{:class => "navbar navbar-inverse"}
-          %div{:class => "navbar-inner"}
+      .container
+        .navbar.navbar-inverse
+          .navbar-inner
             / Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize.
-            %button{:class => "btn btn-navbar", "data-target" => ".nav-collapse", "data-toggle" => "collapse", :type => "button"}
-              %span{:class => "icon-bar"}
-              %span{:class => "icon-bar"}
-              %span{:class => "icon-bar"}
-            %a{:class => "brand", :href => "#"}
-              Project name
+            %button.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse", :type => "button"}
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            %a.brand{:href => "#"} Project name
             / Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse.
-            %div{:class => "nav-collapse collapse"}
-              %ul{:class => "nav"}
-                %li{:class => "active"}
-                  %a{:href => "#"}
-                    Home
+            .nav-collapse.collapse
+              %ul.nav
+                %li.active
+                  %a{:href => "#"} Home
                 %li
-                  %a{:href => "#about"}
-                    About
+                  %a{:href => "#about"} About
                 %li
-                  %a{:href => "#contact"}
-                    Contact
-                %li{:class => "dropdown"}
-                  %a{:class => "dropdown-toggle", "data-toggle" => "dropdown", :href => "#"}
+                  %a{:href => "#contact"} Contact
+                / Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns
+                %li.dropdown
+                  %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
                     Dropdown
-                    %b{:class => "caret"}
+                    %b.caret
                   %ul.dropdown-menu
                     %li
                       %a{:href => "#"} Action
@@ -210,121 +222,91 @@
                       %a{:href => "#"} Another action
                     %li
                       %a{:href => "#"} Something else here
-                    %li{:class => "divider"}
-                    %li{:class => "nav-header"}
-                      Nav header
+                    %li.divider
+                    %li.nav-header Nav header
                     %li
-                      %a{:href => "#"}
-                        Separated link
+                      %a{:href => "#"} Separated link
                     %li
-                      %a{:href => "#"}
-                        One more separated link
-    %div{:id => "myCarousel", :class => "carousel slide"}
-      %div{:class => "carousel-inner"}
-        %div{:class => "item active"}
+                      %a{:href => "#"} One more separated link
+    #myCarousel.carousel.slide
+      .carousel-inner
+        .item.active
           %img{:alt => "", :src => "../assets/img/examples/slide-01.jpg"}
-          %div{:class => "container"}
-            %div{:class => "carousel-caption"}
-              %h1
-                Example headline.
-              %p{:class => "lead"}
-                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-              %a{:class => "btn btn-large btn-primary", :href => "#"}
-                Sign up today
-        %div{:class => "item"}
+          .container
+            .carousel-caption
+              %h1 Example headline.
+              %p.lead Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+              %a.btn.btn-large.btn-primary{:href => "#"} Sign up today
+        .item
           %img{:alt => "", :src => "../assets/img/examples/slide-02.jpg"}
-          %div{:class => "container"}
-            %div{:class => "carousel-caption"}
-              %h1
-                Another example headline.
-              %p{:class => "lead"}
-                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-              %a{:class => "btn btn-large btn-primary", :href => "#"}
-                Learn more
-        %div{:class => "item"}
+          .container
+            .carousel-caption
+              %h1 Another example headline.
+              %p.lead Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+              %a.btn.btn-large.btn-primary{:href => "#"} Learn more
+        .item
           %img{:alt => "", :src => "../assets/img/examples/slide-03.jpg"}
-          %div{:class => "container"}
-            %div{:class =>"carousel-caption"}
-              %h1
-                One more for good measure.
-              %p{:class => "lead"}
-                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-              %a{:class => "btn btn-large btn-primary", :href => "#"}
-                Browse gallery
-      %a{:class => "left carousel-control", "data-slide" => "prev", :href => "#myCarousel"}
-        &lsaquo;
-      %a{:class => "right carousel-control", "data-slide" => "next", :href => "#myCarousel"}
-        &rsaquo;
-    %div{:class => "container marketing"}
+          .container
+            .carousel-caption
+              %h1 One more for good measure.
+              %p.lead Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+              %a.btn.btn-large.btn-primary{:href => "#"} Browse gallery
+      %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel"} &lsaquo;
+      %a.right.carousel-control{"data-slide" => "next", :href => "#myCarousel"} &rsaquo;
+      / Marketing messaging and featurettes
+    / Wrap the rest of the page in another container to center all the content.
+    .container.marketing
       / Three columns of text below the carousel
-      %div{:class => "row"}
-        %div{:class => "span4"}
-          %img{:class => "img-circle", "data-src" => "holder.js/140x140"}
-          %h2
-            Heading
+      .row
+        .span4
+          %img.img-circle{"data-src" => "holder.js/140x140"}
+          %h2 Heading
+          %p Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
           %p
-            Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+            %a.btn{:href => "#"} View details &raquo;
+        .span4
+          %img.img-circle{"data-src" => "holder.js/140x140"}
+          %h2 Heading
+          %p Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
           %p
-            %a{:class => "btn", :href => "#"}
-              View details &raquo;
-        %div{:class => "span4"}
-          %img{:class => "img-circle", "data-src" => "holder.js/140x140"}
-          %h2
-            Heading
+            %a.btn{:href => "#"} View details &raquo;
+        .span4
+          %img.img-circle{"data-src" => "holder.js/140x140"}
+          %h2 Heading
+          %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
           %p
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-          %p
-            %a{:class => "btn", :href => "#"}
-              View details &raquo;
-        %div{:class => "span4"}
-          %img{:class => "img-circle", "data-src" => "holder.js/140x140"}
-          %h2
-            Heading
-          %p
-            Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-          %p
-            %a{:class => "btn", :href => "#"}
-              View details &raquo;
-      / START THE FEATURETTES
-      %hr{:class => "featurette-divider"}
-      %div{:class => "featurette"}
-        %img{:class => "featurette-image pull-right", :src => "../assets/img/examples/browser-icon-chrome.png"}
-        %h2{:class => "featurette-heading"}
-          First featurette headling.
-          %span{:class => "muted"}
-            It'll blow your mind.
-        %p{:class => "lead"}
-          Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
-      %hr{:class => "featurette-divider"}
+            %a.btn{:href => "#"} View details &raquo;
+      %hr.featurette-divider
       .featurette
-        %img{:class => "featurette-image pull-left", :src => "../assets/img/examples/browser-icon-firefox.png"}
-        %h2{:class => "featurette-heading"}
+        %img.featurette-image.pull-right{:src => "../assets/img/examples/browser-icon-chrome.png"}
+        %h2.featurette-heading
+          First featurette headling.
+          %span.muted It'll blow your mind.
+        %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+      %hr.featurette-divider
+      .featurette
+        %img.featurette-image.pull-left{:src => "../assets/img/examples/browser-icon-firefox.png"}
+        %h2.featurette-heading
           Oh yeah, it's that good.
-          %span{:class => "muted"}
-            That's what she said.
-        %p{:class => "lead"}
-          Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
-      %hr{:class => "featurette-divider"}
-      %div{:class => "featurette"}
-        %img{:class => "featurette-image pull-right", :src => "../assets/img/examples/browser-icon-safari.png"}
-        %h2{:class => "featurette-heading"}
+          %span.muted See for yourself.
+        %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+      %hr.featurette-divider
+      .featurette
+        %img.featurette-image.pull-right{:src => "../assets/img/examples/browser-icon-safari.png"}
+        %h2.featurette-heading
           And lastly, this one.
-          %span{:class => "muted"}
-            Sausages.
-        %p{:class => "lead"}
-          Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
-      %hr{:class => "featurette-divider"}
+          %span.muted Checkmate.
+        %p.lead Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+      %hr.featurette-divider
       %footer
-        %p{:class => "pull-right"}
-          %a{:href => "#"}
-            Back to top
+        %p.pull-right
+          %a{:href => "#"} Back to top
         %p
-          &copy; 2013 Company, Inc. &middot;
-          %a{:href => "#"}
-            Privacy
-          &middot;
-          %a{:href => "#"}
-            Terms
+          \&copy; 2013 Company, Inc. &middot;
+          %a{:href => "#"} Privacy
+          \&middot;
+          %a{:href => "#"} Terms
+    / Placed at the end of the document so the pages load faster
     %script{:src => "../assets/js/jquery.js"}
     %script{:src => "../assets/js/bootstrap-transition.js"}
     %script{:src => "../assets/js/bootstrap-alert.js"}

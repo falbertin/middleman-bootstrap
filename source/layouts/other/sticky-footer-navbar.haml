@@ -1,23 +1,20 @@
 !!!
 %html{:lang => "en"}
   %head
-    %meta{:charset => "utf-8"}/
+    %meta{:charset => "utf-8"}
     %title Sticky footer &middot; Twitter Bootstrap
-    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
-    %meta{:content => "", :name => "description"}/
-    %meta{:content => "", :name => "author"}/
-    / CSS
-    %link{:href => "../assets/css/bootstrap.css", :rel => "stylesheet"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+    %meta{:content => "", :name => "description"}
+    %meta{:content => "", :name => "author"}
+
+    %link{:href => "../assets/css/bootstrap.css", :rel => "stylesheet"}
     :css
       /* Sticky footer styles
       -------------------------------------------------- */
-
-      html,
-      body {
+      html, body {
         height: 100%;
         /* The html and body elements cannot have any padding or margin. */
       }
-
       /* Wrapper for page content to push down footer */
       #wrap {
         min-height: 100%;
@@ -26,16 +23,9 @@
         /* Negative indent footer by it's height */
         margin: 0 auto -60px;
       }
-
       /* Set the fixed height of the footer here */
-      #push,
-      #footer {
-        height: 60px;
-      }
-      #footer {
-        background-color: #f5f5f5;
-      }
-
+      #push, #footer { height: 60px; }
+      #footer { background-color: #f5f5f5; }
       /* Lastly, apply responsive CSS fixes as necessary */
       @media (max-width: 767px) {
         #footer {
@@ -45,37 +35,25 @@
           padding-right: 20px;
         }
       }
-
-
-
       /* Custom page CSS
       -------------------------------------------------- */
       /* Not required for template or sticky footer method. */
+      #wrap > .container { padding-top: 60px; }
+      .container .credit { margin: 20px 0; }
+      code { font-size: 80%; }
+    %link{:href => "../assets/css/bootstrap-responsive.css", :rel => "stylesheet"}
 
-      #wrap > .container {
-        padding-top: 60px;
-      }
-      .container .credit {
-        margin: 20px 0;
-      }
-
-      code {
-        font-size: 80%;
-      }
-    %link{:href => "../assets/css/bootstrap-responsive.css", :rel => "stylesheet"}/
-    / HTML5 shim, for IE6-8 support of HTML5 elements
     /[if lt IE 9]
       <script src="../assets/js/html5shiv.js"></script>
-    / Fav and touch icons
-    %link{:href => "../assets/ico/apple-touch-icon-144-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "144x144"}/
-    %link{:href => "../assets/ico/apple-touch-icon-114-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "114x114"}/
-    %link{:href => "../assets/ico/apple-touch-icon-72-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "72x72"}/
-    %link{:href => "../assets/ico/apple-touch-icon-57-precomposed.png", :rel => "apple-touch-icon-precomposed"}/
-    %link{:href => "../assets/ico/favicon.png", :rel => "shortcut icon"}/
+
+    %link{:href => "../assets/ico/apple-touch-icon-144-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "144x144"}
+    %link{:href => "../assets/ico/apple-touch-icon-114-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "114x114"}
+    %link{:href => "../assets/ico/apple-touch-icon-72-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "72x72"}
+    %link{:href => "../assets/ico/apple-touch-icon-57-precomposed.png", :rel => "apple-touch-icon-precomposed"}
+    %link{:href => "../assets/ico/favicon.png", :rel => "shortcut icon"}
   %body
     / Part 1: Wrap all page content here
     #wrap
-      / Fixed navbar
       .navbar.navbar-fixed-top
         .navbar-inner
           .container
@@ -109,8 +87,6 @@
                       %a{:href => "#"} Separated link
                     %li
                       %a{:href => "#"} One more separated link
-            / /.nav-collapse
-      / Begin page content
       .container
         .page-header
           %h1 Sticky footer with fixed navbar
@@ -135,9 +111,6 @@
           and
           = succeed "." do
             %a{:href => "http://ryanfait.com/sticky-footer/"} Ryan Fait
-    /
-      Le javascript
-      \==================================================
     / Placed at the end of the document so the pages load faster
     %script{:src => "../assets/js/jquery.js"}
     %script{:src => "../assets/js/bootstrap-transition.js"}
