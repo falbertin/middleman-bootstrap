@@ -7,9 +7,31 @@ body  { -webkit-text-size-adjust: none; }
 
 body * { -webkit-backface-visibility: hidden; }
 
+// Large desktop 
+@media (min-width: 1200px) {
+	body {
+  		padding-top: 60px;
+  		padding-bottom: 40px;
+	}
+}
+
+// Default
 body {
   padding-top: 60px;
   padding-bottom: 40px;
 }
 
-
+// Portrait tablet to landscape and desktop
+@media (min-width: 768px) and (max-width: 979px) {
+	body { padding-top:0 !important; }
+}
+ 
+// Landscape phone to portrait tablet
+@media (max-width: 767px) { 
+	body { padding-top:0 !important; }
+}
+ 
+// Landscape phones and down
+@media (max-width: 480px) {
+	body { padding-top:0 !important; }
+}
